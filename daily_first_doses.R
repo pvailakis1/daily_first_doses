@@ -31,7 +31,7 @@ for (j in 1:length(countries)) {
 }
 
 colours = c("red", "blue", "black",'cyan','darkgoldenrod2','darkorchid2','hotpink2','tan2')
-ggplot(df, aes(date,daily_first_doses, color=location))+
+ggplot(subset(df,!is.na(df$daily_first_doses)), aes(date,daily_first_doses, color=location))+
   xlim(min(df$date[!is.na(df$daily_first_doses)]),NA)+
   geom_line(size=1.5)+
   ggtitle('Daily First Doses per Capita (7-day average)')+ xlab(NULL)+ ylab(NULL)+
