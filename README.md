@@ -1,2 +1,4 @@
 # daily_first_doses
 Our World in Data unfortunately does not provide a visualisation of daily first doses for covid vaccination, but since it provides data on people vaccinated I created a simple R script to plot daily first doses for the chosen countries.  The script first imports the latest covid owid data from https://covid.ourworldindata.org/data/owid-covid-data.csv and after retaining the relevant rows and columns it iterates through the resulting data frame creating a new column for the seven day average daily first doses. The data frame is lastly plotted using ggplot.
+
+Execute the first few rows as directed so it does not downloand the csv at every run. Edit the `countries` object to select countries by adding the desired country's ISO code. Mind the quotes, and mind the maximum of 8 countries.
