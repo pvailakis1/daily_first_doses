@@ -11,7 +11,7 @@ data <- read.csv('https://covid.ourworldindata.org/data/owid-covid-data.csv', co
 #                CHANGE THE BELOW, MIND THE QUOTES, MAX 8 COUNTRIES!                     #
 ##########################################################################################
 
-countries = c('USA','GBR','CAN','DEU')
+countries = c('USA','GBR','CAD','DEU')
 
 ##########################################################################################
 
@@ -23,7 +23,7 @@ for (j in 1:length(countries)) {
   temp = df[df['iso_code']==countries[j],]
   while (i<Sys.Date()){
     if ((i-7)%in%temp$date){
-      temp[temp$date==i,5] = (temp[temp$date==i,4] - temp[temp$date==i-7,4])/(7*data[data[,1]==countries[j],45][1])
+      temp[temp$date==i,5] = (temp[temp$date==i,4] - temp[temp$date==i-7,4])/(7*data[data[,1]==countries[j],49][1])
     }
     i = i + 1
   }
