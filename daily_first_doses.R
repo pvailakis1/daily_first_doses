@@ -11,7 +11,7 @@ data <- read.csv('https://covid.ourworldindata.org/data/owid-covid-data.csv', co
 #                CHANGE THE BELOW, MIND THE QUOTES, MAX 8 COUNTRIES!                     #
 ##########################################################################################
 
-countries = c('USA','GBR','CAD','DEU')
+countries = c('USA','GBR','CAN','DEU')
 
 ##########################################################################################
 
